@@ -10,6 +10,10 @@ If you already have a virtual environment and want to update it you can instead
 conda env update -f environment.yml
 ```
 
+# Convert files to .wav format
+----
+Tweety net doesn't work with .mat files so you need to convert them to the .wav format. 
+
 
 # Training the Tweeting Net Model
 ----
@@ -20,9 +24,9 @@ conda env update -f environment.yml
 
 # Using your trained model to predict new data
 ----
-## 🛠 Preparing Your Dataset
+## 🛠 1.) Preparing Your Dataset
 
-Before predicting, you'll need to generate spectrogram frames using `vak prep`:
+Before predicting, you'll need to generate spectrogram frames using `vak prep`. 
 
 ```bash
 vak prep configs/vak_pred_chat_v2.toml
@@ -30,7 +34,7 @@ vak prep configs/vak_pred_chat_v2.toml
 
 > **Important**: If you have previously used this config, make sure the `path` field in the `[vak.prep.dataset]` section is commented out. The path will be auto-generated on the first run
 
-## PREDICT! 
+## 2.) Predicting the syllables!
 Now the `path` field in the `[vak.prep.dataset]` should be auto-generated with the correct location! Yay. If this runs successfully your output will be a CSV file with the predicted labels.
 
 ```bash
