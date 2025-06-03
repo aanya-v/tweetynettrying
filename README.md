@@ -12,7 +12,7 @@ conda env update -f environment.yml
 
 # Convert files to .wav format
 ----
-Tweety net doesn't work with .mat files so you need to convert them to the .wav format. 
+Tweety net doesn't work with .mat files so you need to convert them to the .wav format. Reference renamingtowav.mlx file for an example of how to rename. 
 
 
 # Training the Tweeting Net Model
