@@ -16,13 +16,13 @@ conda env update -f environment.yml
 ## Folder Setup
 ----
 Start by creating a new project folder with the following structure:
-
+```
 vak_project_bird1/
 ├── configs/
 ├── scripts/
 ├── data/
 └── results/
-
+```
 ## Convert training files to .wav format
 ----
 Tweety net doesn't work with .mat files so you need to convert them to the .wav format. Reference renamingtowav.mlx file for an example of how to rename the batch file and use rename_files_aanya.m to rename the training files!
@@ -31,7 +31,7 @@ Tweety net doesn't work with .mat files so you need to convert them to the .wav 
 ## Add training files 
 ----
 Place your training files inside a subfolder named `train` within the `data` directory. The structure should look like this:
-
+```
 vak_project_bird1/
 ├── configs/
 │ └── vak_train.toml
@@ -47,7 +47,7 @@ vak_project_bird1/
 │ └── rootresults/ # Empty folder used as the root_results_dir
 ├── output/
 └── results/
-
+```
 # Training the Tweeting Net Model
 ----
 1.) prep the toml file:
