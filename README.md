@@ -118,7 +118,7 @@ Depending on your dataset, you may need to adjust key parameters. I would reccom
 
 # Converting CSV with annotations to .wav.not files
 ----
-
+Use function foo to convert the csv file into notmats
 
 # POTENTIAL ERRORS and log 
 [See error log](https://docs.google.com/document/d/1a5lbKRowmtcYCeoNzsEV__CA7FvF03H-hQYPCRfsTYA/edit?tab=t.0#heading=h.wwhrmlbkw9vs)
