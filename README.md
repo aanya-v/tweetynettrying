@@ -17,7 +17,7 @@ Tweety net doesn't work with .mat files so you need to convert them to the .wav 
 
 # Training the Tweeting Net Model
 ----
-prep the toml file:
+1.) prep the toml file:
 ```bash
 vak prep configs/vak_train.toml
 ```
@@ -30,10 +30,11 @@ will give you a message like this if it works:
 2025-06-19 15:53:10,787 - vak.prep.frame_classification.frame_classification - INFO - Saving dataset csv file: data\output\train_trying-vak-frame-classification-dataset-generated-250619_155130\train_trying_prep_250619_155130.csv
 ```
 
-train:
+2.) train:
 ```bash
 vak train configs/vak_train.toml
 ```
+> If you use my toml file it runs on cpu so it takes forever bc I was unable to figure out how to use gpu instead but if you are able to access that it'll train way faster! 
 
 
 
