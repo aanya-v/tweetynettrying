@@ -76,6 +76,12 @@ vak train configs/vak_train.toml
 ----
 ## 🛠 1.) Preparing Your Dataset
 
+Now your model is trained and should be ready to label new files! First you will need to have the new files in a .wav format. Use the code from before to convert them to .wav files. I like to put them in a subfolder called pred in the train folder. However, you can put this folder wherever you like as long as you assign data_dir correctly
+
+```
+data_dir = "data/train/pred"
+```
+
 Before predicting, you'll need to generate spectrogram frames using `vak prep`. 
 
 ```bash
@@ -85,7 +91,7 @@ vak prep configs/vak_pred.toml
 > **Important**: If you have previously used this config, make sure the `path` field in the `[vak.prep.dataset]` section is commented out. The path will be auto-generated on the first run
 
 ## 2.) Predicting the syllables!
-Now the `path` field in the `[vak.prep.dataset]` should be auto-generated with the correct location! Yay. If this runs successfully your output will be a CSV file with the predicted labels.
+Now the `path` field in the `[vak.prep.dataset]` should be auto-generated with the correct location! Yay. Before running the predict be sure to put in the correct path locations for checkpoint_path labelmap_path and frames_standardizer_path. If this runs successfully your output will be a CSV file with the predicted labels.
 
 ```bash
 vak predict configs/vak_pred.toml
