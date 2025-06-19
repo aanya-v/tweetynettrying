@@ -76,7 +76,7 @@ vak train configs/vak_train.toml
 ----
 ## 🛠 1.) Preparing Your Dataset
 
-Now your model is trained and should be ready to label new files! First you will need to have the new files in a .wav format. Use the code from before to convert them to .wav files. I like to put them in a subfolder called pred in the train folder. However, you can put this folder wherever you like as long as you assign data_dir correctly
+Now your model is trained and should be ready to label new files! First you will need to have the new files in a .wav format. Use the code from before to convert them to .wav files. I like to put them in a subfolder called pred in the train folder. However, you can put this folder wherever you like as long as you assign data_dir correctly. Also make sure that fft_size and step_size match that from the training toml file!!
 
 ```
 data_dir = "data/train/pred"
