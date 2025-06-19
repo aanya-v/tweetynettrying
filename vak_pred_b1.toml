@@ -1,0 +1,35 @@
+# PREP: options for preparing dataset
+[vak.prep]
+dataset_type = "frame classification"
+input_type = "spect"
+data_dir = "data/train/pred"
+output_dir = "data/output"
+audio_format = "wav"
+
+[vak.prep.spect_params]
+fft_size = 512
+step_size = 64
+
+# PREDICT: options for generating predictions with a trained model
+[vak.predict]
+checkpoint_path = "data/train/rootresults/results_250619_160623/TweetyNet/checkpoints/max-val-acc-checkpoint.pt"
+labelmap_path = "data/train/rootresults/results_250619_160623/labelmap.json"
+frames_standardizer_path = "data/train/rootresults/results_250619_160623/FramesStandardizer"
+batch_size = 1
+num_workers = 4
+output_dir = "data/output/predicted"
+annot_csv_filename = "aanyabird1.annot.csv"
+majority_vote = false
+min_segment_dur = 0.03
+
+[vak.predict.dataset]
+params = { window_size = 176 }
+# path = "data\\output\\pred-vak-frame-classification-dataset-generated-250619_175050"
+path = "data\\output\\pred-vak-frame-classification-dataset-generated-250619_181043"
+
+[vak.predict.model.TweetyNet.network]
+hidden_size = 256
+
+[vak.predict.trainer]
+accelerator = "cpu"
+devices = 1
