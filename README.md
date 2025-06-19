@@ -10,15 +10,49 @@ If you already have a virtual environment and want to update it you can instead
 conda env update -f environment.yml
 ```
 
-# Convert files to .wav format
-----
-Tweety net doesn't work with .mat files so you need to convert them to the .wav format. Reference renamingtowav.mlx file for an example of how to rename the batch file and use rename_files_aanya.m to rename the training files! 
 
+# Set up tweety net structure
+
+## Folder Setup
+----
+Start by creating a new project folder with the following structure:
+
+vak_project_bird1/
+├── configs/
+├── scripts/
+├── data/
+└── results/
+
+## Convert training files to .wav format
+----
+Tweety net doesn't work with .mat files so you need to convert them to the .wav format. Reference renamingtowav.mlx file for an example of how to rename the batch file and use rename_files_aanya.m to rename the training files!
+
+
+## Add training files 
+----
+Place your training files inside a subfolder named `train` within the `data` directory. The structure should look like this:
+
+vak_project_bird1/
+├── configs/
+│ └── vak_train.toml
+│ └── vak_pred.toml
+├── scripts/
+├── data/
+│ └── train/
+│ ├── file1.wav
+│ ├── file1.wav.not
+│ ├── file2.wav
+│ ├── file2.wav.not
+│ ├── ...
+│ └── rootresults/ # Empty folder used as the root_results_dir
+├── output/
+└── results/
 
 # Training the Tweeting Net Model
 ----
 1.) prep the toml file:
 ```bash
+cd  C:\Users\avusiri\vak_project_bird1 #navigate to the vak folder
 vak prep configs/vak_train.toml
 ```
 
@@ -45,7 +79,7 @@ vak train configs/vak_train.toml
 Before predicting, you'll need to generate spectrogram frames using `vak prep`. 
 
 ```bash
-vak prep configs/vak_pred_chat_v2.toml
+vak prep configs/vak_pred.toml
 ```
 
 > **Important**: If you have previously used this config, make sure the `path` field in the `[vak.prep.dataset]` section is commented out. The path will be auto-generated on the first run
@@ -54,7 +88,7 @@ vak prep configs/vak_pred_chat_v2.toml
 Now the `path` field in the `[vak.prep.dataset]` should be auto-generated with the correct location! Yay. If this runs successfully your output will be a CSV file with the predicted labels.
 
 ```bash
-vak predict configs/vak_pred_chat_v2.toml
+vak predict configs/vak_pred.toml
 ```
 
 ## ⚙️ Tuning Parameters
