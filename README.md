@@ -68,7 +68,7 @@ will give you a message like this if it works:
 ```bash
 vak train configs/vak_train.toml
 ```
-> If you use my toml file it runs on cpu so it takes forever bc I was unable to figure out how to use gpu instead but if you are able to access that it'll train way faster! 
+> If you use my toml file it runs on cpu so it takes forever bc I was unable to figure out how to use gpu instead but if you are able to access that it'll train way faster! Also take a lunch break or something/ don't touch the computer or else it detects a "keyboard interrupt" and you will need to rerun it
 
 
 
@@ -112,3 +112,9 @@ Depending on your dataset, you may need to adjust key parameters. I would reccom
 
 # Converting CSV with annotations to .wav.not files
 ----
+
+
+# POTENTIAL ERRORS and log 
+[See error log](https://docs.google.com/document/d/1a5lbKRowmtcYCeoNzsEV__CA7FvF03H-hQYPCRfsTYA/edit?tab=t.0#heading=h.wwhrmlbkw9vs)
+
+
