@@ -17,11 +17,20 @@ Tweety net doesn't work with .mat files so you need to convert them to the .wav 
 
 # Training the Tweeting Net Model
 ----
-prep the toml file -> vak prep configs/vak_train.toml
+prep the toml file:
+```bash
+vak prep configs/vak_train.toml
+```
+
+> **Important**: If you have previously used this config, make sure the `path` field in the `[vak.prep.dataset]` section is commented out. The path will be auto-generated on the first run
+
+
 will give you a message like this if it works: 2025-06-19 15:53:10,787 - vak.prep.frame_classification.frame_classification - INFO - Saving dataset csv file: data\output\train_trying-vak-frame-classification-dataset-generated-250619_155130\train_trying_prep_250619_155130.csv
 
-train! -> vak train configs/vak_train.toml
-
+train:
+```bash
+vak train configs/vak_train.toml
+```
 
 
 
