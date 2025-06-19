@@ -25,7 +25,10 @@ vak prep configs/vak_train.toml
 > **Important**: If you have previously used this config, make sure the `path` field in the `[vak.prep.dataset]` section is commented out. The path will be auto-generated on the first run
 
 
-will give you a message like this if it works: 2025-06-19 15:53:10,787 - vak.prep.frame_classification.frame_classification - INFO - Saving dataset csv file: data\output\train_trying-vak-frame-classification-dataset-generated-250619_155130\train_trying_prep_250619_155130.csv
+will give you a message like this if it works: 
+```bash
+2025-06-19 15:53:10,787 - vak.prep.frame_classification.frame_classification - INFO - Saving dataset csv file: data\output\train_trying-vak-frame-classification-dataset-generated-250619_155130\train_trying_prep_250619_155130.csv
+```
 
 train:
 ```bash
